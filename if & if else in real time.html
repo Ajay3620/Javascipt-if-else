@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #m1,#m3,#m5
+        {
+            background-color: blue;
+            color: white;
+            font-size: 15px;
+            border-radius: 30px;
+            text-align: center;
+        }
+        #m2,#m4
+        {
+            background-color: darkblue;
+            font-size: 15px;
+            color: white;
+            border-radius: 30px;
+            text-align: center;
+
+        }
+    </style>
+
+    <script>
+        function showresult()
+        {
+
+            var mark1=parseInt(document.getElementById("m1").value);
+            var mark2=parseInt(document.getElementById("m2").value);
+            var mark3=parseInt(document.getElementById("m3").value);
+            var mark4=parseInt(document.getElementById("m4").value);
+            var mark5=parseInt(document.getElementById("m4").value);
+        
+            document.write("<h1>Result</h1>")
+            document.write("English="+mark1)
+            document.write("<br>Tamil="+mark2)
+            document.write("<br>Math="+mark3)
+            document.write("<br>Science="+mark4)
+            document.write("<br>Social="+mark5)
+
+            if(mark1>34 && mark2>34 && mark3>34 && mark4>34 && mark5>34)
+            {
+                document.write("<br>pass");
+            }
+
+            else
+            {
+                document.write("<br>Faill");
+            }
+
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+    <h1> Enter your subject marks</h1>
+    <input type="text" id="m1" placeholder="English"><br>
+    <input type="text" id="m2" placeholder="Tamil"><br>
+    <input type="text" id="m3" placeholder="Mathas"><br>
+    <input type="text" id="m4" placeholder="Science"><br>
+    <input type="text" id="m5" placeholder="Social"><br><br>
+    <input type="button" onclick="showresult()" value="Result">
+</body>
+</html>

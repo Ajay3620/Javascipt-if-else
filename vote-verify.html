@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+    h1{
+        font-size: 40px;
+        color: white;
+        text-align: center;
+    }
+    #name,#age,#nati
+    {
+        font-size: 15px;
+        color: rgb(255, 255, 255);
+        border-radius: 40px;
+        background-color: transparent;
+
+    }
+    #button{
+        width: 100px;
+        background-color: skyblue;
+        border-radius: 40px;
+    }
+    p{
+        font-weight: bold;
+        color: white;
+    }
+</style>
+
+
+
+
+<script>
+function verify()
+{
+    var name=document.getElementById("name").value;
+    var age=document.getElementById("age").value;
+    var nati=document.getElementById("nati").value;
+
+    if(nati!="indian")
+    {
+        alert("Only Indian can vote");
+    }
+    else    {
+                if(age>=18)
+                { 
+                    if(age==18)
+                        {
+                        document.write("Welcome "+name+" for first time vote<br>");
+                        }
+                    document.write(""+name+" your Eligible to vote<br>");
+                }
+                else if(age<18)
+                {
+                    document.write(""+name+" your not Eligible to vote<br>");
+                }
+            }
+
+}
+
+
+</script>
+
+
+</head>
+<body bgcolor="blue">
+    <h2 style="color: white;"><marquee>Created by Ajay</marquee></h2>
+    <h1>Welcome to vote-verify</h1>
+<center>
+   <p> Enter your Name:<input type="text" id="name"><br><br>
+    Enter your AGE :<input type="number" id="age"><br><br>
+    Enter your Nationality:<input type="text" id="nati"><br><br>
+</p>
+    <input type="button" id="button" value="Verify" onclick="verify();"><br>
+</center>
+</body>
+</html>
